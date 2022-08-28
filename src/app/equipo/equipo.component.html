@@ -1,0 +1,10 @@
+<table [ngClass]="equipo.nombre">
+  <tr *ngFor="let jugador of equipo.jugadores"><!-- Con esto tenemos una linea por cada jugador  -->
+    <td>{{jugador.nombre}}</td>
+    <td>
+      <!-- Permitirá sumar tiros libres, dobles o triples-->
+      <button (click)="setCanasta(1, jugador.nombre)">Libres</button>
+      <button (click)="setCanasta(2, jugador.nombre)">Dobles</button>
+      <button (click)="setCanasta(3, jugador.nombre)">Triples</button>
+    </td>
+  </tr>
